@@ -1,0 +1,89 @@
+.folderGrid-header
+{
+	border: 1px solid #AAAAAA;
+	background-color:lightgray;
+}
+
+.folderGrid-header-back
+{
+	cursor:default;
+	float:left;
+	display:none;
+	border: 2px solid #AAAAAA;
+	background-color:white;
+	padding:5px;
+	margin-top:1px;
+	margin-left:5px;
+}
+
+.folderGrid-header-title
+{
+	text-align:center;
+	margin:8px;
+	color:black;
+	font-weight:bold;
+}
+
+.folderGrid-table {
+	background-color: white;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	text-color:"#000000";
+	width:100%;
+	margin:0px;
+	padding:0px;
+	border-collapse:collapse;
+}
+		   
+.folderGrid-table td, .folderGrid-table th {
+	font-size:13px;
+	font-family:"Trebuchet MS",Arial,Helvetica,sans-serif;
+	font-weight:normal;
+	height:25px;
+	line-height:25px;
+	border:1px solid lightgray;
+	padding:3px 7px 2px 7px;
+	cursor: default;
+}
+							  
+							  
+.folderGrid-table th {
+	font-size:15px;
+	font-family:"Trebuchet MS",Arial,Helvetica,sans-serif;
+	font-weight:bold;
+	text-align:center;
+	text-decoration:underline;
+	padding-top:5px;
+	padding-bottom:4px;
+	background-color:lightgray;
+	border:1px solid white;
+	color:black;
+}
+			  
+			  
+.folderGrid-table tr.alt td {
+	color:#000000;
+	background-color:#ffffff;
+}
+
+.folderGrid-table tr:hover
+{
+	background-color: gray;
+	color:white;
+}
+
+.rSelected {
+	background-color: gray;
+	color:white;
+}
+					  
+.warning {
+	border : 1px double red;
+}
+
+.folder{
+	background : url('../images/folder.gif') no-repeat 50% 50% scroll transparent;
+}
+
+.leaf{
+	background : url('../images/leaf.gif') no-repeat 50% 50% scroll transparent;
+}

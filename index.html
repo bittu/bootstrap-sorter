@@ -1,1 +1,501 @@
-My GitHub Page
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<meta name="viewport" content="width=device-width">
+	
+	<script type="text/javascript">
+		function getDocHeight() {
+			var D = document;
+			return Math.max(
+				Math.max(D.body.scrollHeight, D.documentElement.scrollHeight),
+				Math.max(D.body.offsetHeight, D.documentElement.offsetHeight),
+				Math.max(D.body.clientHeight, D.documentElement.clientHeight)
+			);
+		}
+		
+		window.onload = function(){
+			document.getElementById('loading').style.display = "none";
+			document.getElementById('main').style.display = "block";
+			$('body').scrollspy($('body').data());
+		};
+		
+	</script>
+	
+	<link rel="stylesheet"
+			href="//fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic,bold" title="roboto">
+
+	<link rel="stylesheet" href="stylesheets/bootstrap.css">
+	<link rel="stylesheet" href="stylesheets/bootstrap-responsive.css">
+	<link rel="stylesheet" href="stylesheets/stylesheet.css">
+	<link rel="stylesheet" href="stylesheets/font-awesome.css">
+	<!--[if IE 7]>
+		<link rel="stylesheet" href="stylesheets/font-awesome-ie7.css">
+	<![endif]-->
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/jquery.folderGrid.css"/>
+	<script src="javascripts/modernizr-2.5.3-respond-1.1.0.min.js"></script>
+    <title>bootstrap-SORTER by bittu</title>
+  </head>
+
+  <body data-target=".subnav" data-offset="100">
+
+	<div id="loading">
+		<div class="block">
+			<div class="centered">
+				<img src="images/octocat-spinner-64.gif" alt="octocat-spinner">
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		document.getElementById('loading').style.height = (getDocHeight()-100)+"px";
+	</script>
+	<div id="main">
+    <header>
+		<div class="well ics-border-bottom">
+			<h1><a href="/">bittu.github.com </a><span style="font-size: 24px;">/</span> bootstrap-sorter</h1>
+			<div class="pull-right">
+				<div class="btn-group">
+					<a href="zipball/master" class="btn">
+						<small>Download</small>
+						<h5>.ZIP</h5>
+					</a>
+					<a href="tarball/master" class="btn">
+						<small>Download</small>
+						<h5>.TAR</h5>
+					</a>
+					<a href="fork" class="btn">
+						<small>Fork</small>
+						<h5>GITHUB</h5>
+					</a>
+				</div>
+			</div>
+		</div>
+    </header>
+
+    <div class="container">
+		
+		<div class="row">
+			<div class="span12">
+				<h2 class="pull-right"> - a twBootstrap flavoured light-weight plugin which applies sorting on a table.</h2>
+				<div class="clearfix"></div>
+				<div class="subnav">
+					<ul class="nav nav-pills">
+						<li><a href="#contents">Contents</a></li>
+						<li><a href="#config">Config Options</a></li>
+						<li><a href="#usage">Usage</a></li>
+						<li><a href="#examples">Examples</a></li>
+					</ul>
+				</div>
+
+			</div>	
+		</div>		
+		
+		<div class="row">
+			<div class="span12">
+				<section id="contents">
+					<h3>Contents :</h3>
+					<br />
+					<div class="row">
+						<div class="span6">
+							<h4>JS <small> sorter.js, sorter.min.js</small></h4>
+							<hr />
+							<blockquote>
+								<p class="ics-font-grey">For, you guessed it, the plugin file.</p>
+								<small>
+									<span class="label label-info">edit as u like...</span> 
+									<span class="label label-warning">jus be careful while editing...</span>
+								</small>
+							</blockquote>
+							<br />
+						</div>
+					</div>
+				</section>
+	
+				<section id="config">
+					<h3>Config Options :</h3>
+					<br />
+					<div class="row">
+						<div class="span12">
+							<h4>Mandatory <small>as said, compulsory</small></h4>
+							<hr />
+							<blockquote>
+NONE
+							</blockquote>
+							<br />
+							<h4>Optional <small>has defaults</small></h4>
+							<hr />
+							<blockquote>
+<pre class="prettyprint">
+sortOrder: '&lt;default order for default column&gt;'
+</pre>
+<small><span class="label label-info">default: 'ASC'</span></small>
+							</blockquote>
+							<blockquote>
+<pre class="prettyprint">
+sortCol: '&lt;default column to sort (0 indexed columns)&gt;'
+</pre>
+<small><span class="label label-info">default: 0</span></small>
+							</blockquote>
+							
+							<blockquote>
+<pre class="prettyprint">
+sortAll: '&lt;whether to sort all columns&gt;'
+</pre>
+<small><span class="label label-info">default: true</span></small>
+							</blockquote>
+						</div>
+					</div>
+				</section>
+
+				<section id="usage">
+					<h3>Usage :</h3>
+					<br />
+					<div class="row">
+						<div class="span6">
+							<h4>HTML <small>simple table tag, with <code>data-toggle="sort"</code> attr</small></h4>
+							<hr />
+							<blockquote>
+<pre class="prettyprint">
+&lt;table data-toggle="sort"&gt;
+&lt;/table&gt;
+</pre>
+							</blockquote>
+						</div>
+						<div class="span6">
+							<h4>JS <small>simple plugin call, with mandatory options</small></h4>
+							<hr />
+							<blockquote>
+<pre class="prettyprint">
+$("table").sorter();
+</pre>
+<small><span class="label label-important">needed only when <code>data-toggle="sort"</code> is not defined</span></small>
+							</blockquote>
+						</div>
+					</div>
+				</section>
+
+				<section id="examples">
+					<h3>Examples :</h3>
+					<br />
+					<div class="row">
+						<h4>1. <small>simple, basic</small></h4>
+						<hr />
+						<div class="span6">
+							<h5>Code</h5>
+							<hr />
+							<blockquote>
+<pre class="prettyprint">
+&lt;table id="table1" class=&quot;table table-bordered &quot;&gt;
+  &lt;caption&gt;Table Caption&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;#&lt;/th&gt;
+      &lt;th&gt;First Name&lt;/th&gt;
+      &lt;th&gt;Last Name&lt;/th&gt;
+      &lt;th&gt;Username&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Mark&lt;/td&gt;
+      &lt;td&gt;Otto&lt;/td&gt;
+      &lt;td&gt;@mdo&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Jacob&lt;/td&gt;
+      &lt;td&gt;Thornton&lt;/td&gt;
+      &lt;td&gt;@fat&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Larry&lt;/td&gt;
+      &lt;td&gt;the Bird&lt;/td&gt;
+      &lt;td&gt;@twitter&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+$('#table1').sorter();
+</pre>
+							</blockquote>
+						</div>
+						<div class="span6">
+							<h5>Live</h5>
+							<hr />
+							<blockquote>
+								<div class="listing1">
+									<table id="table1" class="table table-bordered">
+										<caption>Table Caption</caption>
+										<thead>
+											<tr>
+												<th>#</th>
+												<th>First Name</th>
+												<th>Last Name</th>
+												<th>Username</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>Mark</td>
+												<td>Otto</td>
+												<td>@mdo</td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>Jacob</td>
+												<td>Thornton</td>
+												<td>@fat</td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td>Larry</td>
+												<td>the Bird</td>
+												<td>@twitter</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<small><span class="label label-info">default, all columns sorted</span></small>
+							</blockquote>
+						</div>
+					</div>
+					<br />
+					<div class="row">
+						<h4>2. <small>yet very simple, more options</small></h4>
+						<hr />
+						<div class="span6">
+							<h5>Code</h5>
+							<hr />
+							<blockquote>
+<pre class="prettyprint">
+&lt;table class=&quot;table table-bordered&quot; 
+ data-toggle="sort" data-sort-order="desc" data-sort-col="1"&gt;
+  &lt;caption&gt;Table Caption&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;#&lt;/th&gt;
+      &lt;th&gt;First Name&lt;/th&gt;
+      &lt;th&gt;Last Name&lt;/th&gt;
+      &lt;th&gt;Username&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Mark&lt;/td&gt;
+      &lt;td&gt;Otto&lt;/td&gt;
+      &lt;td&gt;@mdo&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Jacob&lt;/td&gt;
+      &lt;td&gt;Thornton&lt;/td&gt;
+      &lt;td&gt;@fat&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Larry&lt;/td&gt;
+      &lt;td&gt;the Bird&lt;/td&gt;
+      &lt;td&gt;@twitter&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+							</blockquote>
+						</div>
+						<div class="span6">
+							<h5>Live</h5>
+							<hr />
+							<blockquote>
+								<div class="listing2">
+									<table class="table table-bordered table-striped table-condensed"
+									  data-toggle="sort" data-sort-order="desc" data-sort-col="1">
+										<caption>Table Caption</caption>
+										<thead>
+											<tr>
+												<th>#</th>
+												<th>First Name</th>
+												<th>Last Name</th>
+												<th>Username</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>Mark</td>
+												<td>Otto</td>
+												<td>@mdo</td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>Jacob</td>
+												<td>Thornton</td>
+												<td>@fat</td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td>Larry</td>
+												<td>the Bird</td>
+												<td>@twitter</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<small><span class="label label-info">custom, sort on First Name; desc</span></small>
+							</blockquote>
+						</div>
+					</div>
+					<br />
+					<div class="row">
+						<h4>3. <small>yet simple, more more options</small></h4>
+						<hr />
+						<div class="span6">
+							<h5>Code</h5>
+							<hr />
+							<blockquote>
+<pre class="prettyprint">
+&lt;table class=&quot;table table-bordered&quot; 
+ data-toggle="sort" data-sort-all="false"&gt;
+  &lt;caption&gt;Table Caption&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th data-sort="true"&gt;#&lt;/th&gt;
+      &lt;th data-sort="true"&gt;First Name&lt;/th&gt;
+      &lt;th data-sort="true"&gt;Last Name&lt;/th&gt;
+      &lt;th&gt;Username&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Mark&lt;/td&gt;
+      &lt;td&gt;Otto&lt;/td&gt;
+      &lt;td&gt;@mdo&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Jacob&lt;/td&gt;
+      &lt;td&gt;Thornton&lt;/td&gt;
+      &lt;td&gt;@fat&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Larry&lt;/td&gt;
+      &lt;td&gt;the Bird&lt;/td&gt;
+      &lt;td&gt;@twitter&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+							</blockquote>
+						</div>
+						<div class="span6">
+							<h5>Live</h5>
+							<hr />
+							<blockquote>
+								<div class="listing2">
+									<table class="table table-bordered table-striped table-condensed"
+									  data-toggle="sort" data-sort-all="false">
+										<caption>Table Caption</caption>
+										<thead>
+											<tr>
+												<th data-sort="true">#</th>
+												<th data-sort="true">First Name</th>
+												<th data-sort="true">Last Name</th>
+												<th>Username</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>Mark</td>
+												<td>Otto</td>
+												<td>@mdo</td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>Jacob</td>
+												<td>Thornton</td>
+												<td>@fat</td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td>Larry</td>
+												<td>the Bird</td>
+												<td>@twitter</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<small><span class="label label-info">custom, username !sorted</span></small>
+							</blockquote>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>		
+    
+	
+	<footer>
+		<div class="footer ics-border-top">
+
+			<p class="pull-left">&copy; Sandeep Vemula <i>aka</i> bittu 2012. </p>
+			<p>&nbsp;&nbsp;Powered By 
+				<a href="https://www.github.com"><i class="icon-github"> </i> Github</a>
+			</p>
+			</div>
+	</footer>
+
+	</div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="javascripts/jquery-1.7.2.min.js"><\/script>')</script>
+
+	<script src="javascripts/bootstrap.min.js"></script>
+	<script src="javascripts/sorter.js"></script>
+
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+							
+			   // fix sub nav on scroll
+    var $win = $(window)
+      , $nav = $('.subnav, .top')
+      , navTop = $('.subnav').length && $('.subnav').offset().top
+      , isFixed = 0
+
+    processScroll()
+
+    // hack sad times - holdover until rewrite for 2.1
+    $nav.on('click', function () {
+      if (!isFixed) setTimeout(function () {  $win.scrollTop($win.scrollTop() - 7) }, 10)
+    })
+
+    $win.on('scroll', processScroll)
+
+    function processScroll() {
+      var i, scrollTop = $win.scrollTop()
+      if (scrollTop > navTop && !isFixed) {
+        isFixed = 1
+        $nav.addClass('subnav-fixed')
+      } else if (scrollTop <= navTop && isFixed) {
+        isFixed = 0
+        $nav.removeClass('subnav-fixed')
+      }
+    }
+	
+	$('#table1').sorter();
+		});
+		
+	</script>
+  </body>
+</html>
