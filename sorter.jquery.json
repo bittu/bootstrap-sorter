@@ -1,0 +1,34 @@
+{
+    "name": "sorter",
+    "title": "jQuery bootstrap table sorter",
+    "description": "a twBootstrap flavoured light-weight plugin which applies sorting on a table. ",
+    "keywords": [
+        "table",
+        "sorter"
+    ],
+    "version": "1.0.0",
+    "author": {
+        "name": "Sandeep Vemula",
+        "url": "http://bittu.github.com"
+    },
+    "maintainers": [
+        {
+            "name": "Sandeep Vemula",
+            "email": "bittu4u.4ever@gmail.com",
+            "url": "http://bittu.github.com"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "Apache",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0"
+        }
+    ],
+    "bugs": "https://github.com/bittu/bootstrap-sorter/issues",
+    "homepage": "http://bittu.github.com/bootstrap-sorter/",
+    "docs": "http://bittu.github.com/bootstrap-sorter/",
+    "download": "https://github.com/bittu/bootstrap-sorter/archive/master.zip",
+    "dependencies": {
+        "jquery": ">=1.5"
+    }
+}
